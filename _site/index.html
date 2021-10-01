@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smurf Talk</title>
+    <link rel="stylesheet" href="/style/tokens.css">
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 6fr;
+            grid-template-rows: 70px auto 70px;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+        }
+
+        header {
+            grid-area: header;
+            display: grid;
+            grid-template-columns: 200px 40% auto 70px 70px;
+            border-bottom: 1px solid var(--color-primary-default, blue);
+            background-color: var(--color-primary-default, gray);
+        }
+
+        header div {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo {
+            justify-content: center;
+            height: 70px;
+        }
+        header .logo img{
+            height: 70px;
+        }
+
+        header .alert {
+            justify-content: center;
+        }
+
+        header .login {
+            justify-content: center;
+        }
+        header .title {
+            font-size: 4rem;
+            color:white;
+        }
+
+        nav {
+            grid-area: sidebar;
+        }
+
+        .sink {
+            grid-area: main;
+            padding: 8px;
+        }
+
+        footer {
+            grid-area: footer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        footer .logo img {
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+    <div class='container'>
+        <header>
+            <div class='logo'><img src="/images/logo.png" alt="logo" srcset=""></div>
+            <div class='title'>Smurf Talk</div>
+
+        </header>
+        <nav>
+            <squid-accordion-group>
+                <squid-accordion>
+                    <span slot="summary">Foundation</span>
+                    <span slot="content">
+                        <div>
+                            <squid-button src='#' variant='text' @click=undefined id="color-list">Base
+                                Color</squid-button>
+                        </div>
+                        <div>
+                            <squid-button src='#' variant='text' @click=undefined id="typography">
+                                Typography</squid-button>
+                        </div>
+                        <div>
+                            <squid-button src='#' variant='text' @click=undefined id="accessibility">
+                                Accessibility</squid-button>
+                        </div>
+                    </span>
+                </squid-accordion>
+                </sauid-accordion-group>
+        </nav>
+        <h2>Welcome to SmurfTalk</h2>
+
+        <footer>
+            <div class='logo'><img src="/images/logo.png" alt="logo" srcset="">&#169; Smurf Talk&trade; All Rights Reserved</div>
+
+        </footer>
+    </div>
+</body>
+</html>
