@@ -3,6 +3,7 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPlugin(pluginMermaid);
   eleventyConfig.addPassthroughCopy("app/images");
   eleventyConfig.addPassthroughCopy("app/style");
+  eleventyConfig.addPassthroughCopy("app/javascript");
   return {
       dir: {
           input: 'app'
