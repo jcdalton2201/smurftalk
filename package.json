@@ -23,7 +23,6 @@
   "homepage": "https://github.com/jcdalton2201/smurftalk#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@kevingimbel/eleventy-plugin-mermaid": "^1.1.0",
-    "@populus/squid": "^0.0.34"
+    "@kevingimbel/eleventy-plugin-mermaid": "^1.1.0"
   }
 }
