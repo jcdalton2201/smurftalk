@@ -128,7 +128,7 @@ exports.data = {
               <!--  </squid-accordion>
                 </sauid-accordion-group>-->
         </nav>
-        <div id='sink' class='sink'>
+        <div id='sink' class='sink editable'>
         ${data.content}
         </div>
         <footer>
