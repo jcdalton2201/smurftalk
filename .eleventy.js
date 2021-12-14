@@ -4,6 +4,12 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("app/images");
   eleventyConfig.addPassthroughCopy("app/style");
   eleventyConfig.addPassthroughCopy("app/javascript");
+  eleventyConfig.cloudcannonOptions = {
+    markdownItOptions: {
+      html: true,
+      linkify: true
+    }
+  };
   return {
       dir: {
           input: 'app'
