@@ -5,6 +5,6 @@ exports.data = {
   
   exports.render = (data) => `
   <div class='editable'>
-  Welcome to Smurf Talk
+  Welcome to testing
   </div>
   `;
