@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name=description content="PGF Design System">
+
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+<title>
+PGF - squid-a
+</title>
+
+<link rel="stylesheet" href="/style/tokens.css">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/icons/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/icons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="images/icons/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="images/icons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="images/icons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="images/icons/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/default.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/languages/go.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Raleway:wght@100;400&display=swap');
+body {
+    margin: 0;
+}
+</style>
+
+</head>
+<body>
+    
+<style>
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 102px auto 80px;
+    height: 99vh;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 5px -3px, rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 0.125rem;
+  }
+  .body {
+    padding: 8px 16px;
+  }
+  header.design {
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    border-bottom: 3px solid var(--color-secondary-default);
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+  }
+  header.design img {
+    height: 70px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    background-color: #afafaf;
+    padding: 4px 8px;
+    border: 1px solid #878787;
+  }
+  td {
+    border: 1px solid #afafaf;
+    padding: 4px 8px;
+  }
+  footer {
+    grid-column: 1/-1;
+    display: flex;
+    padding: 16px 8px;
+
+  }
+  footer img{ 
+    margin: 0 16px;
+  }
+  @media only screen and (max-width: 600px){
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50px auto 40px;
+      height: 99vh;
+    }
+    header.design img {
+      height: 40px;
+    }
+    html {
+      font-size:12px;
+    }
+  }
+  </style>
+  <div class='container'>
+  <header class='design'>
+  <a href='/'>
+  <img src='/images/populus-financial-group-logo.svg'>
+  </a>
+  </header>
+  <nav>
+  <squid-a variant='text' href='/sections/components/'>Home</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-a/'>squid-a</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-accordion-group/'>squid-accordion-group</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-accordion/'>squid-accordion</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-alert/'>squid-alert</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-button/'>squid-button</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-calendar/'>squid-calendar</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-character-count/'>squid-character-count</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-checkbox-group/'>squid-checkbox-group</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-checkbox/'>squid-checkbox</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-combobox/'>squid-combobox</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-container/'>squid-container</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-currency/'>squid-currency</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-datepicker/'>squid-datepicker</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-dialog/'>squid-dialog</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-drawer/'>squid-drawer</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-email/'>squid-email</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-errors/'>squid-errors</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-hero-number/'>squid-hero-number</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-input-mask/'>squid-input-mask</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-input/'>squid-input</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-nav-group/'>squid-nav-group</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-nav/'>squid-nav</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-number/'>squid-number</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-password/'>squid-password</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-radio-group/'>squid-radio-group</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-radio/'>squid-radio</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-select/'>squid-select</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-ssn/'>squid-ssn</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-stepper/'>squid-stepper</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-sub-nav/'>squid-sub-nav</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-telephone/'>squid-telephone</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-textarea/'>squid-textarea</squid-a>
+  
+  <squid-a variant='text' href='/components/squid-toggle/'>squid-toggle</squid-a>
+  
+  </nav>
+  <div class='body'>
+
+    <div class='sink'><h1>squid-a</h1>
+    <h2>Description</h2> <p><code>SquidA</code> is a web component.</p>
+<p>There are several variants of the button, called types. Each has it's own specific meaning and use cases; more detail can be found at the link above. Here's what the system says about the button component.</p>
+<blockquote>
+<p>Buttons communicate the action that will take place when triggered. They’re hierarchically more important than link text or another pattern that points to supplementary content.</p>
+</blockquote>
+
+    <h2>Attributes</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Kind</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>String</td>
+<td>field</td>
+<td>Sets the anchor's target. If set to <code>_blank</code> the anchor will also include a <code>rel=&quot;noopener&quot;</code> unless the element's override attribute is set to 'allow'.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>String</td>
+<td>field</td>
+<td>Changes the button's size. Valid values are <code>'normal'</code> and <code>'small'</code>.</td>
+</tr>
+<tr>
+<td>_target</td>
+<td>string</td>
+<td>field</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>href</td>
+<td>String</td>
+<td>field</td>
+<td>The anchor's href. If not set, the value will default to a <code>javascript:void(0)</code> value. Reflected as a property.</td>
+</tr>
+<tr>
+<td>variant</td>
+<td>String</td>
+<td>field</td>
+<td>The variant attribute defines what class of button is rendered. It is reflected by the <code>type</code> property on the element. The possible values are <code>'link'</code>, <code>'action'</code>, <code>'progressive'</code>, <code>'regressive'</code>, <code>'destructive'</code>, <code>'ghost'</code>, <code>'text'</code>, <code>'left'</code> and <code>'right'</code>. If one of the button values is used, the anchor will be given a role of <code>'button'</code>. This was previously the <code>type</code> attribute until version 5.</td>
+</tr>
+<tr>
+<td>referrer</td>
+<td>String</td>
+<td>field</td>
+<td>If set to 'allow' will not set the the anchor's <code>rel</code> attribute to <code>'noopener'</code>. This is strongly discouraged for security reasons.</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>string</td>
+<td>field</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>field</td>
+<td>Sets the anchor to be disabled or not.</td>
+</tr>
+</tbody>
+</table>
+
+    <h2>Methods</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Kind</th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+
+    <h2>Example</h2>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">squid-a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span>&gt;</span>GitHub in a new tab<span class="hljs-tag">&lt;/<span class="hljs-name">squid-a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">squid-a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://google&quot;</span>&gt;</span>google<span class="hljs-tag">&lt;/<span class="hljs-name">squid-a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre>
+
+    <hr>
+    <div>
+    <p><squid-a href="https://github.com/" target="_blank">GitHub in a new tab</squid-a></p>
+<p><squid-a href="https://google">google</squid-a></p> 
+    </div>
+    </div>
+                    
+</div>
+<footer>
+
+    <img src='/images/icons/icon-72x72.png'>
+    <p>© 2021 Populus Financial Group™. All Rights Reserved.</p>
+  </footer>
+  </div>
+
+</body>
+<script src='/javascript/squid-code-ui.min.mjs' ></script>
+</html>

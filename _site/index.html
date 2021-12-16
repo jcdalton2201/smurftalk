@@ -2,141 +2,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta name=description content="PGF Design System">
+
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name=description content="Test blog site">
-    <title>Smurf Talk</title>
-    <link rel="stylesheet" href="/style/tokens.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Raleway&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Raleway', sans-serif;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 6fr;
-            grid-template-rows: 70px auto 70px;
-            grid-template-areas:
-                "header header"
-                "sidebar main"
-                "footer footer";
-        }
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
-        header {
-            grid-area: header;
-            display: grid;
-            grid-template-columns: 200px 40% auto 70px 70px;
-            border-bottom: 1px solid var(--color-primary-default, blue);
-            background-color: var(--color-primary-default, gray);
-            font-family: 'Merriweather', serif;
-        }
+<title>
+PGF - Design Systems
+</title>
 
-        header div {
-            display: flex;
-            align-items: center;
-        }
+<link rel="stylesheet" href="/style/tokens.css">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/icons/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/icons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="images/icons/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="images/icons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="images/icons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="images/icons/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/default.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/languages/go.min.js"></script>
+<script>hljs.highlightAll();</script>
 
-        header .logo {
-            justify-content: center;
-            height: 70px;
-        }
-        header .logo img{
-            height: 70px;
-        }
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Raleway:wght@100;400&display=swap');
+body {
+    margin: 0;
+}
+</style>
 
-        header .alert {
-            justify-content: center;
-        }
-
-        header .login {
-            justify-content: center;
-        }
-        header .title {
-            font-size: 4rem;
-            color:white;
-        }
-
-        nav {
-            grid-area: sidebar;
-            padding: 8px 0 0 8px;
-            overflow-wrap: break-word;
-            text-overflow: ellipsis;
-        }
-        nav div {
-            overflow-wrap: break-word;
-            text-overflow: ellipsis;
-        }
-
-        .sink {
-            grid-area: main;
-            padding: 8px;
-        }
-
-        footer {
-            grid-area: footer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        footer .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-           
-        }
-        footer .logo img {
-            height:30px;
-        }
-        h1,h2 {
-            font-family: 'Merriweather', serif;
-        }
-    </style>
 </head>
 <body>
-    <div class='container'>
-        <header>
-            <div class='logo'>
-                <a href='/'>
-                    <img src="/images/logo.png" alt="logo" srcset="">
-                </a>
-            </div>
-            <div class='title editable'>Smurf Talk</div>
+    
+  <style>
+  #craneBox {
+    grid-column: 5/6;
+    grid-row: 2/3;
+    align-self: end;
+    justify-self: end;
+  }
+  #largeCrane {
+    grid-column: 3/3;
+    grid-row: 1/2;
+    align-self: end;
+  }
+  .heroHeader {
+    display:grid;
+    background-color:var(--color-primary-default);
+    height:70vh;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
+  .heroText {
+    grid-row: 3/4;
+    grid-column: 2/4;
+    overflow-wrap: break-word;
+  }
+  .headerTitle {
+    font-size: 3rem;
+    margin: 0 0 16px 0;
+    font-family: 'Raleway', sans-serif;
+  }
+  .headerDescription {
+    font-size: 1.125rem;
+    font-family: 'Merriweather', serif;
+  }
+  div {
+    color:white;
+  }
+  h1 {
+    color: white;
+    font-size: 3rem;
+  }
+  .sections{
+    
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+  }
+  .section {
+    color:black;
+  }
+  .sectionBox {
+    padding: 16px;
+    border: 1px solid gray;
+    box-shadow: rgba(0,0,0,0.05) 0px 1px 2px 0px, rgba(0,0,0,0.05) 0px 1px 4px 0px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 300px;
+    border-radius:4px;
+  }
+  .sectionBox:hover {
+    border: 2px solid gray;
+  }
+  .sectionBox .icon {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .sectionBox .sectionTitle  {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    color: var(--color-primary-default);
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    align-self: end;
+  }
+  .sectionBox .sectionDescription {
+    grid-row: 2/3;
+    grid-column: 2/-1;
+  }
+  .hidden-text{
+    position: absolute;
+    overflow: hidden;
+    clip: rect(1px,1px,1px,1px);
+    width: 1px;
+    height: 1px;
+    word-wrap: normal
+  }
+  @media only screen and (max-width: 600px){
+    #craneBox, #largeCrane{
+      display: none;
+    }
+    html {
+      font-size:12px;
+    }
+    .heroHeader {
+      display:grid;
+      background-color:var(--color-primary-default);
+      height:200px;
+      grid-template-columns: repeat(1,1fr);
+      grid-template-rows: repeat(1,1fr);
+    }
+    .heroText {
+      grid-row: 1/2;
+      grid-column: 1/2;
+      overflow-wrap: break-word;
+      padding: 16px;
+    }
+    .sections {
+      display: flex;
+      align-items: center;
+      margin-top: 16px;
+      flex-direction: column;
+    }
+    .sectonBox {
+      width: 90vw;
+    }
+  }
+  </style>
+  <div class='content'>
+  <div class='heroHeader'>
+  <svg id='craneBox' width="235" height="247" viewBox="0 0 235 247" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M134.833 236.879C138.665 236.879 141.771 234.32 141.771 231.164C141.771 228.007 138.665 225.448 134.833 225.448C131.002 225.448 127.896 228.007 127.896 231.164C127.896 234.32 131.002 236.879 134.833 236.879Z" stroke="white"/>
+<path d="M221.167 236.879C224.998 236.879 228.104 234.32 228.104 231.164C228.104 228.007 224.998 225.448 221.167 225.448C217.335 225.448 214.229 228.007 214.229 231.164C214.229 234.32 217.335 236.879 221.167 236.879Z" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M124.042 160.671H175.688V205.761L194.188 186.709H223.479V205.761H124.042V160.671Z" stroke="white" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M223.479 218.462H127.896C121.729 223.966 118.646 228.2 118.646 231.164C118.646 234.127 121.729 238.573 127.896 244.5H223.479C230.16 239.846 233.5 235.401 233.5 231.164C233.5 226.927 230.16 222.693 223.479 218.462Z" stroke="white" stroke-width="2"/>
+<path d="M140.229 218.462V212.747H212.688V218.462" stroke="white" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M194.187 186.709L129.438 55.2506L150.25 48.9L218.854 186.709H194.187Z" stroke="white" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M144.083 51.4403L136.375 69.2221L166.437 79.3831L153.333 101.61L183.396 114.947L170.292 137.809L200.354 149.875L188.021 173.373L218.854 185.439L198.812 186.709L209.604 167.657L179.542 156.226L191.104 131.458L161.812 120.662L174.146 97.1649L144.083 85.0987L156.417 60.3312L136.375 53.3455L144.083 51.4403Z" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M136.375 53.3455L114.021 1.27014L124.042 10.7961L144.854 50.1701L136.375 53.3455Z" stroke="white"/>
+<path d="M110.937 0V90.1792L85.5 113.042V153.051H140.229L141 113.042H85.5" stroke="white" stroke-width="2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M112.479 90.8143L138.687 112.406H112.479V90.8143Z" stroke="white" stroke-width="2"/>
+<path d="M151.792 234.339C153.92 234.339 155.646 232.917 155.646 231.164C155.646 229.41 153.92 227.988 151.792 227.988C149.663 227.988 147.938 229.41 147.938 231.164C147.938 232.917 149.663 234.339 151.792 234.339Z" stroke="white"/>
+<path d="M204.208 234.339C206.337 234.339 208.062 232.917 208.062 231.164C208.062 229.41 206.337 227.988 204.208 227.988C202.08 227.988 200.354 229.41 200.354 231.164C200.354 232.917 202.08 234.339 204.208 234.339Z" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M129.438 168.292V186.709H158.729C158.135 178.336 156.079 173.044 152.562 170.832C149.046 168.621 141.337 167.774 129.438 168.292Z" stroke="white"/>
+<path d="M48 212.5H1V246.5H48V212.5Z" stroke="white"/>
+<path d="M96 212.5H49V246.5H96V212.5Z" stroke="white"/>
+<path d="M48 177.5H1V211.5H48V177.5Z" stroke="white"/>
+</svg>
 
-        </header>
-        <nav>
-            <!--<squid-accordion-group>
-                <squid-accordion>
-                    <span slot="summary">Foundation</span>
-                    <span slot="content"> -->
-                    
-                    <div>
-                            <squid-a  variant='text' href=/_posts/2017-06-22-Getting_back/ id="Getting Back to Where We All Started">Getting Back to Where We All Started</squid-a>
-                        </div>
-                    
-                    <div>
-                            <squid-a  variant='text' href=/_posts/2020-10-04-Testing_accessibility/ id="Testing Accessibility Before you Deploy with GitHub Actions.">Testing Accessibility Before you Deploy with GitHub Actions.</squid-a>
-                        </div>
-                    
-                        
-                    </span>
-              <!--  </squid-accordion>
-                </sauid-accordion-group>-->
-        </nav>
-        <div id='sink' class='sink'>
-        
-  Welcome to Smurf Talk
-  
-        </div>
-        <footer>
-            <div class='logo'><img src="/images/logo.png" alt="logo" srcset="">&#169; Smurf Talk&trade; All Rights Reserved</div>
+  <svg id='largeCrane' width="271" height="178" viewBox="0 0 271 178" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M167.5 177H200L196 23H167.5V177Z" stroke="white"/>
+<path d="M270.5 44H225.5V82H270.5V44Z" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M167.5 28H149V64.5H167.5V28Z" stroke="white"/>
+<path d="M163.5 30H149.5V57H163.5V30Z" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M259.5 21.5L31.5 24.5L2 1H259.5V21.5Z" stroke="white"/>
+<path d="M248 43.5V21.5" stroke="white"/>
+<path d="M40 24.5L41.5 89H36L40 97.5H45L48.5 89H42.5" stroke="white"/>
+<path d="M43 97.5V101.5C44.7647 102.323 45.7647 103.323 46 104.5C46.353 106.265 46.0401 107.74 44.5 109C43.4733 109.84 42.1399 109.84 40.5 109L39 106.5" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M34 20V28H46V20H40V27V20H34Z" stroke="white"/>
+<path d="M167.5 171H200L166 138L199 110.5L167.5 83.5L197 56L167.5 29.5L195.5 23H167.5H195.5L167.5 29.5H197L167.5 56L198 82.5L167.5 110.5L199 138L167.5 171ZM167.5 171H200H167.5Z" stroke="white"/>
+<path d="M259.5 1L237.5 21.5L216 1L194.5 21.5L171 1L149 23L126.5 1L104 23L83.5 1L57 24L34 1L18 14L2 1H18L34 24.5L60.5 1L83.5 24L104 1L126.5 23L149 1L172.5 23L193.5 1L216 21.5L237.5 1L259.5 21.5" stroke="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M42.5 108.5L24.5 121V133H76.5V120.5L42.5 108.5Z" stroke="white"/>
+<path d="M24.5 121H76.5" stroke="white"/>
+<path d="M42.5 108.5C42.5 109.167 42.5 113.333 42.5 121" stroke="white"/>
+</svg>
 
-        </footer>
+    <div class='heroText'>
+    
+      <div class='headerTitle'>Populus One</div>
+      <div class='headerDescription'>Populus One provides everything you 
+      needed to  quickly design, build, and ship coherent experiences Across 
+      all of PFG - from the brand and products itself, down to how we send emails 
+      and write copy</div>
     </div>
+  </div>
+  <div class='sections'>
+  
+  
+  <div class='sectionBox'>
+    <div class='icon'><a href='/sections/brand/'><span class='hidden-text'>Brand</span>
+     <svg aria-label='brand' aria-hidden="true" class="svg-spot spotTheme" width="48" height="48" viewBox="0 0 48 48"><path opacity=".2" d="M16.83 45h.67l25.22-25.56a3 3 0 000-4.25l-5.07-5.07a3 3 0 00-4.24 0L17 26.52V44a3 3 0 01-.17 1z"></path><path d="M9 43a4 4 0 110-8 4 4 0 0 1 0 8zm0-2a2 2 0 100-4 2 2 0 0 0 0 4zm5-40H4a3 3 0 00-3 3v40a3 3 0 003 3h40a3 3 0 003-3V34a3 3 0 00-3-3H28.15l12.57-12.56a3 3 0 000-4.25l-7.07-7.07a3 3 0 00-4.24 0L17 19.52V4a3 3 0 00-3-3zm30 44H16.83a3 3 0 00.17-1v-1.85L26.15 33H44a1 1 0 011 1v10a1 1 0 01-1 1zm-4.7-27.98L17 39.32V22.37L30.82 8.54a1 1 0 011.41 0l7.08 7.07a1 1 0 010 1.41zM3 4a1 1 0 011-1h10a1 1 0 011 1v40a1 1 0 01-1 1H4a1 1 0 01-1-1V4z"></path></svg>
+     </a></div>
+    <div class='sectionTitle section'>Brand</div>
+    <div class='sectionDescription section'>Visual patterns and guidelines for PFG brands.</div>
+  </div>
+  
+  
+  <div class='sectionBox'>
+    <div class='icon'><a href='/sections/components/'><span class='hidden-text'>Components</span><svg aria-hidden="true" class="svg-spot spotPuzzle" width="48" height="48" viewBox="0 0 48 48">
+    <path opacity=".2" d="m36.11 15.9-3.78 3.79c-.37.37-.97.22-1.19-.22a2.92 2.92 0 00-3.41-1.7 2.92 2.92 0 
+    0 0-.52 5.56c.44.22.6.81.22 1.18L24.02 28l-3.78-3.78a.7.7 0 00-1.12.14 2.95 2.95 0 0 1-3.19 1.34 2.89 2.89 0 
+    0 1-2.15-2.15 2.9 2.9 0 0 1 1.34-3.2c.37-.21.52-.8.14-1.1L12 15.98 21.87 5.9a3.05 3.05 0 014.3 0l9.94 10.02z">
+    </path><path d="M21.14 1.18a4.04 4.04 0 015.71 0l19.96 19.96a4.02 4.02 0 01.07 5.64L26.85 46.82a4.04 4.04 0
+     01-5.71 0L1.18 26.86a4.05 4.05 0 010-5.72L11.2 11.2h.01l9.93-10.01zm1.41 1.42-9.23 9.3 2.56 2.56a1.7 1.7 
+     0 01-.32 2.67 1.95 1.95 0 0 0-.9 2.13 2.1 2.1 0 0 0 1.49 1.47 1.9 1.9 0 0 0 2.08-.86l.02-.02c.27-.46.74-.74 
+     1.21-.82a1.6 1.6 0 011.5.5l2.9 2.91 2.53-2.54a3.83 3.83 0 01-1.85-4.26 3.98 3.98 0 0 1 2.88-2.9h.01a3.83 3.83 
+     0 014.28 1.84l2.86-2.85-9.13-9.13c-.8-.8-2.1-.8-2.89 0zm13.43 10.54-3.14 3.14c-.91.91-2.28.48-2.75-.47-.42-.83-1.2-1.37-2.17-1.14a1.99 
+     1.99 0 00-1.43 1.44c-.25.96.3 1.75 1.13 2.17.95.47 1.39 1.84.47 2.75l-2.82 2.82 2.97 2.98c.9-1.2 2.4-1.87 
+     4.06-1.5 1.44.3 2.6 1.5 2.98 2.94v.04a3.93 3.93 0 01-1.49 4.07l2.34 2.33 9.34-9.34c.7-.7.74-2-.08-2.81L36 
+     13.14zM22.44 23.85l-2.67-2.67a3.93 3.93 0 01-4.11 1.49 4.08 4.08 0 0 1-2.95-2.98 3.94 3.94 0 0 1 1.5-4.06l-2.3-2.31-9.31 
+     9.24c-.8.8-.8 2.09 0 2.88l9.12 9.13 2.95-2.94c.4-.42.96-.57 1.48-.48.48.1.9.39 1.15.8a1.86 1.86 0 
+     002.03.85c.6-.13 1.2-.68 1.4-1.42.17-.78-.14-1.6-.84-2a1.76 1.76 0 01-.8-1.2c-.09-.47.02-1.06.5-1.47l2.85-2.86zM13.14 
+     36l9.41 9.41c.8.8 2.1.8 2.89 0l9.27-9.27-2.56-2.56a1.6 1.6 0 01-.51-1.5c.08-.47.36-.94.82-1.21l.02-.01a1.9 
+     1.9 0 00.86-2.09 2.08 2.08 0 0 0-1.46-1.48h-.01c-.88-.2-1.66.17-2.13.89-.25.41-.67.71-1.17.8-.52.1-1.07-.06-1.5-.48l-3.22-3.22-2.6 
+     2.6a3.84 3.84 0 011.42 4 3.98 3.98 0 0 1-2.91 2.88 3.85 3.85 0 0 1-3.95-1.44L13.14 36zM8.47 6.53a1.37 1.37 0 11-1.94 1.94 1.37 
+     1.37 0 0 1 1.94-1.94zm33 33a1.38 1.38 0 11-1.94 1.94 1.38 1.38 0 0 1 1.94-1.94zm-34.94 0a1.38 1.38 0 111.94 1.94 1.38 1.38 0 
+     0 1-1.94-1.94zm33-33a1.38 1.38 0 111.94 1.94 1.38 1.38 0 0 1-1.94-1.94z"></path></svg></a></div>
+    <div class='sectionTitle section'>Components</div>
+    <div class='sectionDescription section'>Robust vanilla Javascript component library to build component web applications</div>
+  </div>
+  
+  
+  <div class='sectionBox'>
+    <div class='icon'><a href='/sections/design/'><span class='hidden-text'>Design</span><svg aria-hidden="true" class="svg-spot spotDocumentAlt" width="48" height="48" viewBox="0 0 48 48">
+    <path d="M39 6c2.5 0 4 0 4 2v35a3 3 0 01-3 3H11c-2 0-2-2.34-2-4h30V6zm-19 6a4 4 0 11-8 0 4 4 0 0 1 8 0z" 
+    opacity=".2"></path><path d="M10 20a1 1 0 100 2h24a1 1 0 100-2H10zm0 5a1 1 0 100 2h24a1 1 0 100-2H10zm0 
+    5a1 1 0 100 2h24a1 1 0 100-2H10zm0 5a1 1 0 100 2h24a1 1 0 100-2H10zM4 4a3 3 0 013-3h30a3 3 0 013 3v1h.91C42.61 
+    5 44 6.31 44 7.93v36.14A3.01 3.01 0 0140.91 47H11.1A3.01 3.01 0 018 44.07V43H7a3 3 0 01-3-3V4zm6.06 39v1.07a1 
+    1 0 001.03.98H40.9a1 1 0 001.03-.98V7.93a1 1 0 00-1.03-.98H40V40a3 3 0 01-3 3H10.06zM7 3a1 1 0 00-1 1v36a1 1 0 
+    001 1h30a1 1 0 001-1V4a1 1 0 00-1-1H7zm6.5 10a2.5 2.5 0 110-5 2.5 2.5 0 0 1 0 5zm0 2a4.5 4.5 0 100-9 4.5 4.5 0 0 0 0 9z">
+    </path></svg></a></div>
+    <div class='sectionTitle section'>Design</div>
+    <div class='sectionDescription section'>End-to-end design language to create simple, intuitive, and beautiful experiences.</div>
+  </div>
+  
+  </div>
+  </div>
+  
 </body>
-<script src='/javascript/squid-core-ui.min.mjs' ></script>
+<script src='/javascript/squid-code-ui.min.mjs' ></script>
 </html>

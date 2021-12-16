@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name=description content="PGF Design System">
+
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+<title>
+PGF - Design
+</title>
+
+<link rel="stylesheet" href="/style/tokens.css">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/icons/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/icons/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/icons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/icons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png" />
+<link rel="icon" type="image/png" href="images/icons/favicon-196x196.png" sizes="196x196" />
+<link rel="icon" type="image/png" href="images/icons/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="images/icons/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="images/icons/favicon-128.png" sizes="128x128" />
+<meta name="application-name" content="&nbsp;"/>
+<meta name="msapplication-TileColor" content="#FFFFFF" />
+<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+<link rel="manifest" href="/manifest.json">
+<link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/styles/default.min.css">
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/highlight.min.js"></script>
+<!-- and it's easy to individually load additional languages -->
+<script src="https://unpkg.com/@highlightjs/cdn-assets@11.2.0/languages/go.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Raleway:wght@100;400&display=swap');
+body {
+    margin: 0;
+}
+</style>
+
+</head>
+<body>
+    
+<style>
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 102px auto 80px;
+    height: 95vh;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 5px -3px, rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 0.125rem;
+  }
+  .body {
+    padding: 8px 16px;
+  }
+  footer {
+    grid-column: 1/-1;
+    display: flex;
+    padding: 16px 8px;
+
+  }
+  footer img{ 
+    margin: 0 16px;
+  }
+  header.design {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    border-bottom: 3px solid var(--color-secondary-default);
+    padding-left: 16px;
+    display: flex;
+    align-items: center;
+  }
+  header.design img {
+    height: 70px;
+  }
+  @media only screen and (max-width: 600px){
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50px auto 40px;
+      height: fit-content;
+    }
+    header.design img {
+      height: 40px;
+    }
+    html {
+      font-size:12px;
+    }
+    
+  }
+  </style>
+  <div class='container'>
+  <header class='design'>
+  <a href='/'>
+  <img src='/images/populus-financial-group-logo.svg'>
+  </a>
+  </header>
+  <nav>
+  <squid-a variant='text' href='/sections/design/'>Home</squid-a>
+  
+  <squid-a variant='text' href='/pages/desgin/color/'>Color</squid-a>
+  
+  <squid-a variant='text' href='/pages/desgin/porte-color/'>Porte Color</squid-a>
+  
+  <squid-a variant='text' href='/pages/desgin/elite-color/'>Elite Color</squid-a>
+  
+  <squid-a variant='text' href='/pages/desgin/flare-color/'>Flare Color</squid-a>
+  
+  <squid-a variant='text' href='/pages/desgin/accessibility/'>Accessibility</squid-a>
+  
+  <squid-a variant='text' href='/pages/desgin/typography/'>Typography</squid-a>
+  
+  </nav>
+  <div class='body'>
+    
+  
+  
+  
+  <style>
+  .infoSection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .headline {
+    font-size:2.5rem;
+    font-family: 'Raleway', sans-serif;
+  }
+  .boxIcon {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+  }
+  .boxIcon {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    color:var(--font-color-default)
+  }
+  .boxIcon .bodyText{
+    grid-column: 2/3;
+  }
+  .boxIcon svg{
+    align-self: center;
+  }
+  .boxIcon .headline{
+    align-self: center;
+  }
+  .boxIcon a{
+    grid-column: 2/3;
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    margin-bottom:64px;
+  }
+  .hero .title {
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: 'Raleway';
+    margin:0 0 16px 0;
+  }
+  .hero .label{
+    font-size: 1.75rem;
+  }
+  .hero .subtext {
+    max-width: 400px;
+    line-height: 1.5rem;
+    grid-row:2/3;
+  }
+  .heroImage {
+    width:75vh;
+  }
+  .heroImageDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 0;
+    grid-row: 1/3;
+  }
+  @media only screen and (max-width: 600px){
+    .heroImageDiv {
+      display:none;
+    }
+    .infoSection {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-bottom: 8px;
+    }
+  }
+  </style>
+  <section class='sectionBody'>
+  <div class="hero">
+  <div class="title">
+  Populus One</br>
+  Design System
+  </div>
+  <div class='subtext'>
+    <span class='label'> Build great products, faster.</span><br>
+    Populus One empowers product and developennt teams, to create great experiences for PFG financial software with inclusive tools, alignment, and processes.
+    </div>
+    <div class='heroImageDiv'>
+    <img class='heroImage' src='/images/design-one.png'>
+    </div>
+  </div>
+  <div class="infoSection">
+    <div class="infoSectionBox">
+      <p class="headline">Connect with Us</p>
+      <p class="bodyText">
+        Need help with Populus One? Found something wrong? Reach out to us for your
+        need.
+      </p>
+    </div>
+    <div class="infoSectionBox boxIcon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        height="24px"
+        width="24px"
+        viewBox="0 0 24 24">
+      <path
+        d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+      ></path></svg>
+      <div class="headline">Report an Issue</div>
+      <div class="bodyText">
+      Ran into a bug in the code or design? We use Azure Devops to track
+      outstanding issues with Populus On.
+      </div>
+      <a  role="link"
+          class="Link p-l-half m-l-4 Link--blue"
+          href="https://acecashexpress.visualstudio.com/PFG%20Design/_workitems/recentlyupdated/"
+          >File an issue on Azure DevOps</a>
+    </div>
+
+    <div class="infoSectionBox boxIcon">
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="currentColor"
+    height="24px"
+    width="24px"
+    viewBox="0 0 24 24">
+    <path
+      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"></path></svg>
+      <div class="headline">Get Help</div>
+      <div class="bodyText">
+      You can reach the Design team in the #ask-designsystem Teams channel.
+      </div>
+      <a  role="link"
+          class="Link"
+          href="https://acecashexpress.visualstudio.com/PFG%20Design/_workitems/recentlyupdated/"
+          >Join the Teams channel</a>
+    </div>
+    <div class="infoSectionBox boxIcon">
+    </div>
+    <div class="infoSectionBox boxIcon">
+    <svg xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        height="24px"
+        width="24px"
+        viewBox="0 0 24 24">
+        <path
+          d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"
+        ></path></svg>
+      <div class="headline">Suggest an Idea</div>
+      <div class="bodyText">
+      Have an idea for a component, pattern, or documentation? Submit your
+            idea to&nbsp;Azure DevOps.
+      </div>
+      <a
+            role="link"
+            class="Link p-l-half m-l-4 Link--blue"
+            href="https://acecashexpress.visualstudio.com/PFG%20Design/_workitems/recentlyupdated/"
+            >Add an idea on Azure DevOps</a
+          >
+    </div>
+
+    <div class="infoSectionBox boxIcon">
+    <svg xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        height="24px"
+        width="24px"
+        viewBox="0 0 24 24">
+        <path
+          d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"
+        ></path></svg>
+      <div class="headline">Populus One Roadmap</div>
+      <div class="bodyText">
+      We update our roadmap every quarter with what we’re working on.
+      </div>
+      <a
+            role="link"
+            class="Link p-l-half m-l-4 Link--blue"
+            href="https://acecashexpress.visualstudio.com/PFG%20Design"
+            >View the roadmap</a
+          >
+    </div>
+
+  </div>
+  </section>
+  
+  
+  
+  
+  </div>
+  <footer>
+  
+    <img src='/images/icons/icon-72x72.png'>
+    <p>© 2021 Populus Financial Group™. All Rights Reserved.</p>
+  </footer>
+</div>
+
+</body>
+<script src='/javascript/squid-code-ui.min.mjs' ></script>
+</html>
