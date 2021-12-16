@@ -14,6 +14,6 @@ module.exports = (eleventyConfig) => {
       dir: {
           input: 'app'
       },
-      templateFormats: ["css", "js", "txt","md"],
+      templateFormats: ["css", "js", "txt","md","html"],
   }
 };
