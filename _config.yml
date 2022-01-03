@@ -9,7 +9,9 @@ defaults:
     values:
       layout: "default"
 
-
+_enabled_editors:
+  - visual
+  - content
 _editor:
   default_path: /sections/brand/
 
